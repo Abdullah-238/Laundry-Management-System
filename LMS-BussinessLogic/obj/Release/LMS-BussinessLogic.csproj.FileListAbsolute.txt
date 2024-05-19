@@ -1,0 +1,11 @@
+D:\C_Sharp\LMS-BussinessLogic\bin\Release\LMS-BussinessLogic.dll
+D:\C_Sharp\LMS-BussinessLogic\bin\Release\LMS-BussinessLogic.pdb
+D:\C_Sharp\LMS-BussinessLogic\bin\Release\LMS-DataAccess.dll
+D:\C_Sharp\LMS-BussinessLogic\bin\Release\LMS-DataAccess.pdb
+D:\C_Sharp\LMS-BussinessLogic\obj\Release\LMS-BussinessLogic.csproj.AssemblyReference.cache
+D:\C_Sharp\LMS-BussinessLogic\obj\Release\LMS-BussinessLogic.csproj.CoreCompileInputs.cache
+D:\C_Sharp\LMS-BussinessLogic\obj\Release\LMS-BussinessLogic.csproj.CopyComplete
+D:\C_Sharp\LMS-BussinessLogic\obj\Release\LMS-BussinessLogic.dll
+D:\C_Sharp\LMS-BussinessLogic\obj\Release\LMS-BussinessLogic.pdb
+D:\C_Sharp\LMS-BussinessLogic\bin\Release\AForge.dll
+D:\C_Sharp\LMS-BussinessLogic\bin\Release\AForge.xml

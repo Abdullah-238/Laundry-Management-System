@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FD337CD-F84C-4D61-B6DE-D96990BA6161}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Washing_App</RootNamespace>
+    <AssemblyName>Washing App</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global\clsUtil.cs" />
+    <Compile Include="Main\ucMainHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\ucMainHeader.Designer.cs">
+      <DependentUpon>ucMainHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Order\frmOpenCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Order\frmOpenCamera.Designer.cs">
+      <DependentUpon>frmOpenCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reprots\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reprots\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Order\frmCompleteOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Order\frmCompleteOrder.Designer.cs">
+      <DependentUpon>frmCompleteOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laundry\frmSelectDefaultLaundry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laundry\frmSelectDefaultLaundry.Designer.cs">
+      <DependentUpon>frmSelectDefaultLaundry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laundry\frmLaundryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laundry\frmLaundryList.Designer.cs">
+      <DependentUpon>frmLaundryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Order\frmNewOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Order\frmNewOrders.Designer.cs">
+      <DependentUpon>frmNewOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\frmAddEditItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\frmAddEditItems.Designer.cs">
+      <DependentUpon>frmAddEditItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\frmItemsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\frmItemsList.Designer.cs">
+      <DependentUpon>frmItemsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsGlobal.cs" />
+    <Compile Include="Login In\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login In\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\ucOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Order\ucOrder.Designer.cs">
+      <DependentUpon>ucOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reprots\frmReportesByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reprots\frmReportesByDate.Designer.cs">
+      <DependentUpon>frmReportesByDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laundry\frmLaundry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laundry\frmLaundry.Designer.cs">
+      <DependentUpon>frmLaundry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\frmUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUserList.Designer.cs">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main\ucMainHeader.resx">
+      <DependentUpon>ucMainHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Order\frmOpenCamera.resx">
+      <DependentUpon>frmOpenCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reprots\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Order\frmCompleteOrder.resx">
+      <DependentUpon>frmCompleteOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laundry\frmSelectDefaultLaundry.resx">
+      <DependentUpon>frmSelectDefaultLaundry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laundry\frmLaundryList.resx">
+      <DependentUpon>frmLaundryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Order\frmNewOrders.resx">
+      <DependentUpon>frmNewOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\frmAddEditItems.resx">
+      <DependentUpon>frmAddEditItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\frmItemsList.resx">
+      <DependentUpon>frmItemsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login In\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\ucOrder.resx">
+      <DependentUpon>ucOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reprots\frmReportesByDate.resx">
+      <DependentUpon>frmReportesByDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laundry\frmLaundry.resx">
+      <DependentUpon>frmLaundry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="User\frmUserList.resx">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LMS-BussinessLogic\LMS-BussinessLogic.csproj">
+      <Project>{4879f8ba-234d-4461-8c10-214b6e121f31}</Project>
+      <Name>LMS-BussinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase_order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonDetails 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\washing_machine %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeBlack32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action_items_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action_items_list1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action_items_list_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clothes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase_order %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase_order %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase_order1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_awake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\washing_machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qr_code_access.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

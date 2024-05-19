@@ -1,0 +1,9 @@
+D:\C_Sharp\LMS-DataAccess\bin\Release\LMS-DataAccess.dll
+D:\C_Sharp\LMS-DataAccess\bin\Release\LMS-DataAccess.pdb
+D:\C_Sharp\LMS-DataAccess\obj\Release\LMS-DataAccess.csproj.AssemblyReference.cache
+D:\C_Sharp\LMS-DataAccess\obj\Release\LMS-DataAccess.csproj.CoreCompileInputs.cache
+D:\C_Sharp\LMS-DataAccess\obj\Release\LMS-DataAccess.dll
+D:\C_Sharp\LMS-DataAccess\obj\Release\LMS-DataAccess.pdb
+D:\C_Sharp\LMS-DataAccess\bin\Release\AForge.dll
+D:\C_Sharp\LMS-DataAccess\bin\Release\AForge.xml
+D:\C_Sharp\LMS-DataAccess\obj\Release\LMS-DataAccess.csproj.CopyComplete

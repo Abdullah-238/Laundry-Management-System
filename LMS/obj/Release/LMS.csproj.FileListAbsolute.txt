@@ -1,0 +1,42 @@
+D:\C_Sharp\Washing App\obj\Release\LMS.csproj.AssemblyReference.cache
+D:\C_Sharp\Washing App\obj\Release\LMS.csproj.SuggestedBindingRedirects.cache
+D:\C_Sharp\Washing App\obj\Release\Washing_App.Items.frmAddEditItems.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.frmItemsList.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.frmSettings.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.frmLogin.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.Order.ucOrder.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.frmAddUpdateUser.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.frmLaundry.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.Properties.Resources.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.User.frmUserList.resources
+D:\C_Sharp\Washing App\obj\Release\LMS.csproj.GenerateResource.cache
+D:\C_Sharp\Washing App\obj\Release\LMS.csproj.CoreCompileInputs.cache
+D:\C_Sharp\Washing App\bin\Release\Washing App.exe.config
+D:\C_Sharp\Washing App\bin\Release\Washing App.exe
+D:\C_Sharp\Washing App\bin\Release\Washing App.pdb
+D:\C_Sharp\Washing App\bin\Release\AForge.dll
+D:\C_Sharp\Washing App\bin\Release\AForge.Video.DirectShow.dll
+D:\C_Sharp\Washing App\bin\Release\AForge.Video.dll
+D:\C_Sharp\Washing App\bin\Release\LMS-BussinessLogic.dll
+D:\C_Sharp\Washing App\bin\Release\QRCoder.dll
+D:\C_Sharp\Washing App\bin\Release\zxing.dll
+D:\C_Sharp\Washing App\bin\Release\zxing.presentation.dll
+D:\C_Sharp\Washing App\bin\Release\LMS-DataAccess.dll
+D:\C_Sharp\Washing App\bin\Release\LMS-BussinessLogic.pdb
+D:\C_Sharp\Washing App\bin\Release\AForge.xml
+D:\C_Sharp\Washing App\bin\Release\AForge.Video.xml
+D:\C_Sharp\Washing App\bin\Release\AForge.Video.DirectShow.xml
+D:\C_Sharp\Washing App\bin\Release\zxing.xml
+D:\C_Sharp\Washing App\bin\Release\zxing.presentation.xml
+D:\C_Sharp\Washing App\bin\Release\LMS-DataAccess.pdb
+D:\C_Sharp\Washing App\obj\Release\Washing_App.Main.ucMainHeader.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.Order.Order.frmOpenCamera.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.frmReport.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.frmCompleteOrder.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.frmSelectDefaultLaundry.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.Laundry.frmLaundryList.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.NewOrders.resources
+D:\C_Sharp\Washing App\obj\Release\Washing_App.frmMain.resources
+D:\C_Sharp\Washing App\obj\Release\LMS.csproj.CopyComplete
+D:\C_Sharp\Washing App\obj\Release\Washing App.exe
+D:\C_Sharp\Washing App\obj\Release\Washing App.pdb
