@@ -82,3 +82,45 @@ D:\C_Sharp\LMS\Washing App\obj\Debug\LMS.csproj.CoreCompileInputs.cache
 D:\C_Sharp\LMS\Washing App\obj\Debug\LMS.csproj.Up2Date
 D:\C_Sharp\LMS\Washing App\obj\Debug\Washing App.exe
 D:\C_Sharp\LMS\Washing App\obj\Debug\Washing App.pdb
+D:\C_Sharp\LMS\LMS\bin\Debug\Washing App.exe.config
+D:\C_Sharp\LMS\LMS\bin\Debug\Washing App.exe
+D:\C_Sharp\LMS\LMS\bin\Debug\Washing App.pdb
+D:\C_Sharp\LMS\LMS\bin\Debug\AForge.dll
+D:\C_Sharp\LMS\LMS\bin\Debug\AForge.Video.DirectShow.dll
+D:\C_Sharp\LMS\LMS\bin\Debug\AForge.Video.dll
+D:\C_Sharp\LMS\LMS\bin\Debug\LMS-BussinessLogic.dll
+D:\C_Sharp\LMS\LMS\bin\Debug\QRCoder.dll
+D:\C_Sharp\LMS\LMS\bin\Debug\zxing.dll
+D:\C_Sharp\LMS\LMS\bin\Debug\zxing.presentation.dll
+D:\C_Sharp\LMS\LMS\bin\Debug\LMS-DataAccess.dll
+D:\C_Sharp\LMS\LMS\bin\Debug\LMS-BussinessLogic.pdb
+D:\C_Sharp\LMS\LMS\bin\Debug\AForge.xml
+D:\C_Sharp\LMS\LMS\bin\Debug\AForge.Video.xml
+D:\C_Sharp\LMS\LMS\bin\Debug\AForge.Video.DirectShow.xml
+D:\C_Sharp\LMS\LMS\bin\Debug\zxing.xml
+D:\C_Sharp\LMS\LMS\bin\Debug\zxing.presentation.xml
+D:\C_Sharp\LMS\LMS\bin\Debug\LMS-DataAccess.pdb
+D:\C_Sharp\LMS\LMS\obj\Debug\LMS.csproj.AssemblyReference.cache
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.Main.ucMainHeader.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.Order.Order.frmOpenCamera.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.frmReport.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.frmCompleteOrder.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.frmSelectDefaultLaundry.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.Laundry.frmLaundryList.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.NewOrders.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.Items.frmAddEditItems.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.frmItemsList.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.frmSettings.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.frmLogin.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.Order.ucOrder.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.Reprots.frmReportesByDate.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.frmAddUpdateUser.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.frmLaundry.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.frmMain.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.Properties.Resources.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing_App.User.frmUserList.resources
+D:\C_Sharp\LMS\LMS\obj\Debug\LMS.csproj.GenerateResource.cache
+D:\C_Sharp\LMS\LMS\obj\Debug\LMS.csproj.CoreCompileInputs.cache
+D:\C_Sharp\LMS\LMS\obj\Debug\LMS.csproj.Up2Date
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing App.exe
+D:\C_Sharp\LMS\LMS\obj\Debug\Washing App.pdb

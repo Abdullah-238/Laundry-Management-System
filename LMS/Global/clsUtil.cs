@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,37 +10,12 @@ namespace Washing_App.Global
 {
     public class clsUtil
     {
-
         public static string GenerateGUID()
         {
-            Guid guid = Guid.NewGuid();
+            Guid newGuid = Guid.NewGuid();
 
-            return guid.ToString();
+            return newGuid.ToString();
         }
-
-        public static bool CreateFolderIfDoesNotExist(string FolderPath)
-        {
-
-            // Check if the folder exists
-            if (!Directory.Exists(FolderPath))
-            {
-                try
-                {
-                    // If it doesn't exist, create the folder
-                    Directory.CreateDirectory(FolderPath);
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error creating folder: " + ex.Message);
-                    return false;
-                }
-            }
-
-            return true;
-
-        }
-
         public static string ReplaceFileNameWithGUID(string sourceFile)
         {
             string fileName = sourceFile;
@@ -51,9 +25,25 @@ namespace Washing_App.Global
 
         }
 
-        public static bool CopyImageToProjectImagesFolder(ref string sourceFile)
+        public static bool CreateFolderIfDoesNotExist(string folderpath)
         {
-            string DestinationFolder = @"D:\C_Sharp\Washing App\Laundry\Images\";
+            if (!Directory.Exists(folderpath))
+            {
+                try
+                {
+                    Directory.CreateDirectory(folderpath);
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool CopyImageToProjectImagesFolder(ref string sourceFile, string DestinationFolder)
+        {
             if (!CreateFolderIfDoesNotExist(DestinationFolder))
             {
                 return false;
@@ -74,6 +64,7 @@ namespace Washing_App.Global
             sourceFile = destinationFile;
             return true;
         }
+
 
     }
 }

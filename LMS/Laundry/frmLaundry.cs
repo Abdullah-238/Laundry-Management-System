@@ -58,10 +58,13 @@ namespace Washing_App
                 {
                     if (pbcLogo.ImageLocation != null)
                     {
-                        //then we copy the new image to the image folder after we rename it
+                        string currentDirectory = System.IO.Directory.GetCurrentDirectory();
+
+                        string DestinationFolder = currentDirectory + @"-Images\";
+
                         string SourceImageFile = pbcLogo.ImageLocation.ToString();
 
-                        if (clsUtil.CopyImageToProjectImagesFolder(ref SourceImageFile))
+                        if (clsUtil.CopyImageToProjectImagesFolder(ref SourceImageFile, DestinationFolder))
                         {
                             pbcLogo.ImageLocation = SourceImageFile;
                             return true;
@@ -82,6 +85,10 @@ namespace Washing_App
 
         private void btSave_Click(object sender, EventArgs e)
         {
+
+            if (!_HandleImage())
+                return; 
+
             if (!this.ValidateChildren())
             {
                 MessageBox.Show("Some Feilds are empty , Please Fill All required Feilds to continue",
@@ -103,12 +110,12 @@ namespace Washing_App
 
             if (_Laundry.Save())
             {
-                MessageBox.Show("Data Saved Succesfully", "Done", MessageBoxButtons.OK,
+                MessageBox.Show("Data Saved Successfully", "Done", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Data Saved Faild", "Errorr", MessageBoxButtons.OK,
+                MessageBox.Show("Data Saved Failed", "Error", MessageBoxButtons.OK,
                    MessageBoxIcon.Error);
             }
 
