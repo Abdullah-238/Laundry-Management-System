@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,8 +90,42 @@ namespace Washing_App
 
         }
 
+        private void CompleteOrder_OnBookingCompleted(object sender, clsGlobal.CompleteOrderEventArgs e)
+        {
+            string currentDirectory = System.IO.Directory.GetCurrentDirectory();
+
+            string FilePath = currentDirectory + "\\OrderData.txt";
+
+
+            if (!File.Exists(FilePath))
+            {
+                File.Create(FilePath);
+            }
+
+            string dataToSave = "New Order ID : " + e.NewOrder.OrderID.ToString();
+
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(FilePath,true))
+                {
+                    writer.NewLine = "\n";
+                    writer.WriteLine(dataToSave);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            label2.Text = DateTime.Now.ToString();
+
+        }
+
         private void frmMenu_Load(object sender, EventArgs e)
         {
+
+            clsGlobal.completeOrder.OnBookingCompleted += CompleteOrder_OnBookingCompleted;
+
             ucMainHeader1.LoadInfo();
 
             string LaundryName = "";

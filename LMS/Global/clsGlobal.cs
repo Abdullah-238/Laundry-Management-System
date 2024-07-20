@@ -198,5 +198,28 @@ namespace Washing_App
             }
         }
 
+        public static CompleteOrder completeOrder = new CompleteOrder();
+        public class CompleteOrderEventArgs : EventArgs
+        {
+            public clsOrders NewOrder { get; }
+
+            public CompleteOrderEventArgs(clsOrders Order)
+            {
+                this.NewOrder = Order;
+            }
+        }
+        public  class CompleteOrder 
+        {
+            public event EventHandler<CompleteOrderEventArgs> OnBookingCompleted;
+            public void Create(clsOrders Order)
+            {
+                if (OnBookingCompleted != null)
+                {
+                    OnBookingCompleted(this, new CompleteOrderEventArgs(Order));
+                }
+            }
+        }
+
+
     }
 }

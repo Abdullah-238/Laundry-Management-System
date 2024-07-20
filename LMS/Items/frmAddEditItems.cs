@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Washing_App.Global;
 using Washing_App.Properties;
 
 namespace Washing_App.Items
@@ -129,6 +130,46 @@ namespace Washing_App.Items
                 llRemove.Visible = true;
             }
         }
+        public bool _handleHotelsImage()
+        {
+            if (Item.ImagePath != pcItemPicture.ImageLocation)
+            {
+                if (Item.ImagePath != "")
+                {
+                    try
+                    {
+                        File.Delete(Item.ImagePath);
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                if (pcItemPicture.ImageLocation != null)
+                {
+                    string currentDirectory = System.IO.Directory.GetCurrentDirectory();
+
+                    string DestinationFolder = currentDirectory + @"-Images\";
+
+                    string SourceFile = pcItemPicture.ImageLocation.ToString();
+                    try
+                    {
+                        clsUtil.CopyImageToProjectImagesFolder(ref SourceFile, DestinationFolder);
+
+                        pcItemPicture.ImageLocation = SourceFile;
+
+                        return true;
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error Copying Image File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
 
         private void btCancel_Click_1(object sender, EventArgs e)
         {
@@ -144,6 +185,9 @@ namespace Washing_App.Items
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (!_handleHotelsImage())
+                return;
 
 
             Item.ItemName = txName.Text;

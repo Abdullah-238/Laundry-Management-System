@@ -33,13 +33,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btNewOrder = new System.Windows.Forms.Button();
             this.ucMainHeader1 = new Washing_App.Main.ucMainHeader();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Washing_App.Properties.Resources.purchase_order__2_;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -56,7 +58,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::Washing_App.Properties.Resources.settings;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -73,7 +75,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Washing_App.Properties.Resources.sign_out__1_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -90,7 +92,7 @@
             // 
             this.btNewOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btNewOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btNewOrder.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNewOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btNewOrder.ForeColor = System.Drawing.Color.White;
             this.btNewOrder.Image = global::Washing_App.Properties.Resources.purchase_order__1_;
             this.btNewOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,22 +110,42 @@
             this.ucMainHeader1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucMainHeader1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ucMainHeader1.Location = new System.Drawing.Point(0, 501);
-            this.ucMainHeader1.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.ucMainHeader1.Margin = new System.Windows.Forms.Padding(7, 10, 7, 10);
             this.ucMainHeader1.Name = "ucMainHeader1";
             this.ucMainHeader1.Size = new System.Drawing.Size(1070, 29);
             this.ucMainHeader1.TabIndex = 6;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(833, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 32);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Last Order date :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(833, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 32);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "0";
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 48F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 530);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ucMainHeader1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btNewOrder);
-            this.Font = new System.Drawing.Font("Poppins", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.Name = "frmMain";
@@ -131,6 +153,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -140,5 +163,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private Main.ucMainHeader ucMainHeader1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

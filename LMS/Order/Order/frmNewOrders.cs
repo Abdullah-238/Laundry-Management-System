@@ -6,17 +6,21 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Washing_App.Order;
+using static Washing_App.clsGlobal;
 
 namespace Washing_App
 {
     public partial class NewOrders : Form
     {
+       
+
         clsLaundry Laundry;
 
         clsOrders Order;
@@ -176,6 +180,7 @@ namespace Washing_App
                 return;
             }
 
+            
 
             clsCustomers Customer = new clsCustomers();
 
@@ -185,6 +190,7 @@ namespace Washing_App
 
             if (!Customer.Save())
             {
+
                 MessageBox.Show("Customer Order Saved Falid", "Error");
                 return;
             }
@@ -234,6 +240,8 @@ namespace Washing_App
                 MessageBoxIcon.Information);
             btPrint.Enabled = true;
             btCheckOut.Enabled = false;
+
+            completeOrder.Create(Order);
 
             Order = clsOrders.Find(_OrderID);
             Laundry =  clsGlobal.CurrentLaundry; 
@@ -336,8 +344,9 @@ namespace Washing_App
 
             SolidBrush blueBrush = new SolidBrush(Color.DarkCyan);
 
-            e.Graphics.DrawString("\tInvoce"  , new Font("Poppins", 20, FontStyle.Bold), Brushes.DarkCyan, 280, 30);
+            e.Graphics.DrawString("\tInvoice"  , new Font("Poppins", 20, FontStyle.Bold), Brushes.DarkCyan, 280, 30);
 
+            if (File.Exists(Laundry.ImagePath))
             e.Graphics.DrawImage(Image.FromFile(Laundry.ImagePath), 400, 70,100,100);
 
             e.Graphics.DrawString(
